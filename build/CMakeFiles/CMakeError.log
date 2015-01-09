@@ -1,0 +1,239 @@
+Determining if the system is big endian passed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec439742127/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec439742127.dir/build.make CMakeFiles/cmTryCompileExec439742127.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec439742127.dir/TestEndianess.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec439742127.dir/TestEndianess.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec439742127
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec439742127.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTryCompileExec439742127.dir/TestEndianess.c.o  -o cmTryCompileExec439742127  
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of off64_t failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3060716631/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3060716631.dir/build.make CMakeFiles/cmTryCompileExec3060716631.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3060716631.dir/OFF64_T.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3060716631.dir/OFF64_T.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:19:12: error: use of undeclared identifier 'off64_t'; did you mean 'off_t'?
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(off64_t))
+                     ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:20:12: error: use of undeclared identifier 'off64_t'; did you mean 'off_t'?
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(off64_t))
+                     ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:21:12: error: use of undeclared identifier 'off64_t'; did you mean 'off_t'?
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(off64_t))
+                     ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:22:12: error: use of undeclared identifier 'off64_t'; did you mean 'off_t'?
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(off64_t))
+                     ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:23:12: error: use of undeclared identifier 'off64_t'; did you mean 'off_t'?
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(off64_t))
+                     ^
+5 errors generated.
+make[1]: *** [CMakeFiles/cmTryCompileExec3060716631.dir/OFF64_T.c.o] Error 1
+make: *** [cmTryCompileExec3060716631/fast] Error 2
+
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3867329811/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3867329811.dir/build.make CMakeFiles/cmTryCompileExec3867329811.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3867329811.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3867329811.dir/CheckIncludeFile.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'io.h' file not found
+#include <io.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTryCompileExec3867329811.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTryCompileExec3867329811/fast] Error 2
+
+
+Determining if the function jbg_newlen exists failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2229483180/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2229483180.dir/build.make CMakeFiles/cmTryCompileExec2229483180.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2229483180.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3 -DCHECK_FUNCTION_EXISTS=jbg_newlen -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2229483180.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.1.0/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2229483180
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2229483180.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3 -DCHECK_FUNCTION_EXISTS=jbg_newlen -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTryCompileExec2229483180.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2229483180  
+Undefined symbols for architecture x86_64:
+  "_jbg_newlen", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTryCompileExec2229483180] Error 1
+make: *** [cmTryCompileExec2229483180/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3736193800/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3736193800.dir/build.make CMakeFiles/cmTryCompileExec3736193800.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3736193800.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3736193800.dir/CheckIncludeFile.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'linux/videodev.h' file not found
+#include <linux/videodev.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTryCompileExec3736193800.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTryCompileExec3736193800/fast] Error 2
+
+
+Determining if the include file linux/videodev2.h exists failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1294581524/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1294581524.dir/build.make CMakeFiles/cmTryCompileExec1294581524.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1294581524.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1294581524.dir/CheckIncludeFile.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'linux/videodev2.h' file not found
+#include <linux/videodev2.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTryCompileExec1294581524.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTryCompileExec1294581524/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec607618510/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec607618510.dir/build.make CMakeFiles/cmTryCompileExec607618510.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec607618510.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec607618510.dir/CheckIncludeFile.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'sys/videoio.h' file not found
+#include <sys/videoio.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTryCompileExec607618510.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTryCompileExec607618510/fast] Error 2
+
+
+Determining if the include file libavformat/avformat.h exists failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec243700040/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec243700040.dir/build.make CMakeFiles/cmTryCompileExec243700040.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec243700040.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec243700040.dir/CheckIncludeFile.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'libavformat/avformat.h' file not found
+#include <libavformat/avformat.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTryCompileExec243700040.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTryCompileExec243700040/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2237262951/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2237262951.dir/build.make CMakeFiles/cmTryCompileExec2237262951.dir/build
+/usr/local/Cellar/cmake/3.1.0/bin/cmake -E cmake_progress_report /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2237262951.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -fdiagnostics-show-option -Wno-long-long -fno-omit-frame-pointer -msse -msse2 -msse3  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2237262951.dir/CheckIncludeFile.c.o   -c /Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/spectralnischay/Desktop/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'ffmpeg/avformat.h' file not found
+#include <ffmpeg/avformat.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTryCompileExec2237262951.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTryCompileExec2237262951/fast] Error 2
+
+

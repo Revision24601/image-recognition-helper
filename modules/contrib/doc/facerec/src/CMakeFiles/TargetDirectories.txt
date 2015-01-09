@@ -1,0 +1,5 @@
+/Users/spectralnischay/Desktop/opencv-2.4.10/modules/contrib/doc/facerec/src/CMakeFiles/facerec_demo.dir
+/Users/spectralnischay/Desktop/opencv-2.4.10/modules/contrib/doc/facerec/src/CMakeFiles/facerec_eigenfaces.dir
+/Users/spectralnischay/Desktop/opencv-2.4.10/modules/contrib/doc/facerec/src/CMakeFiles/facerec_video.dir
+/Users/spectralnischay/Desktop/opencv-2.4.10/modules/contrib/doc/facerec/src/CMakeFiles/facerec_fisherfaces.dir
+/Users/spectralnischay/Desktop/opencv-2.4.10/modules/contrib/doc/facerec/src/CMakeFiles/facerec_lbph.dir
